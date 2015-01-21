@@ -72,8 +72,8 @@ public class KarelsToTheMax extends GraphicsProgram {
 			}
 		}
 		
-    // because we're doing integer division, there's a loss of precision; but 
-    // the human eye generally isn't sensitive enough to notice the minor differences
+		// because we're doing integer division, there's a loss of precision; but 
+		// the human eye generally isn't sensitive enough to notice the minor differences
 		avgRed /= ((x2 - x1) * (y2 - y1));
 		avgGreen /= ((x2 - x1) * (y2 - y1));
 		avgBlue /= ((x2 - x1) * (y2 - y1));
@@ -86,7 +86,7 @@ public class KarelsToTheMax extends GraphicsProgram {
 	public void mouseMoved(MouseEvent e) {
 		GOval oval = (GOval) getElementAt(e.getX(), e.getY());
 		if (oval != null) {
-      // we need a cut off so that we don't try to average the color of half a pixel
+			// we need a cut off so that we don't try to average the color of half a pixel
 			if (oval.getWidth()/2 < 1) return;
 
 			remove(oval);
